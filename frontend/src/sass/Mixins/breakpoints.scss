@@ -1,0 +1,51 @@
+// breakpoint for responsiveness
+
+@mixin breakpoint($point) {
+  @if $point == XFullHD {
+    @media only screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $point == WXGA {
+    @media only screen and (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if $point == HD1 {
+    @media only screen and (max-width: 1366px) {
+      @content;
+    }
+  }
+
+  @if $point == HD2 {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $point == PAL {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $point == SVGA {
+    @media only screen and (max-width: 720px) {
+      @content;
+    }
+  }
+
+  @if $point == HVGA {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if $point == OVGA {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+}

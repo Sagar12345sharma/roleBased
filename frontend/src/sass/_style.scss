@@ -1,0 +1,79 @@
+@import "./Mixins/mixins.scss";
+@import "./Mixins/breakpoints.scss";
+@import "./Variables/variables.scss";
+@import "./Global/base";
+@import "./Components/header.scss";
+@import "./Components/footer.scss";
+@import "./Components/content.scss";
+@import "./Components/genericRoleBasedLoginSinUp.scss";
+@import "./Components/confirmationModal.scss";
+
+#root {
+  height: 100vh;
+  padding: 0rem;
+  margin: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  @include breakpoint("HVGA") {
+    padding-top: 15rem;
+  }
+
+  .App {
+    height: 100%;
+    width: 90%;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  height: 3rem;
+  padding-left: 1rem;
+}
+
+.cross_icon {
+  position: absolute;
+  top: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  opacity: 1;
+  color: white;
+  border-radius: 50%;
+  background-color: $color_primary;
+  right: 1.5rem;
+  cursor: pointer;
+}
+.cross_icon:before,
+.cross_icon:after {
+  position: absolute;
+  left: 14px;
+  content: " ";
+  height: 1.9rem;
+  width: 0.3rem;
+  background-color: white;
+  top: 20%;
+}
+.cross_icon:before {
+  transform: rotate(45deg);
+}
+.cross_icon:after {
+  transform: rotate(-45deg);
+}

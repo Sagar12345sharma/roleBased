@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  @include center(row);
+  justify-content: space-between;
+  height: 10%;
+  background-color: grey;
+  padding: 0rem 3rem;
+  box-sizing: border-box;
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .login_signup_container {
+    display: flex;
+
+    .login {
+      display: flex;
+
+      .loginbtn,
+      .signupbtn {
+        font-size: 1.3rem;
+        color: white;
+        background: black;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
